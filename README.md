@@ -2,7 +2,7 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
-This is a fork of [https://github.com/holman/dotfiles](holman's dotfiles).
+This is a fork of [holman's dotfiles](https://github.com/holman/dotfiles).
 
 ## install
 
