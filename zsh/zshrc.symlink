@@ -2,7 +2,10 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+export PROJECTS=~/workspace
+
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -38,4 +41,14 @@ do
   source $file
 done
 
+plugins=(sublime sudo terminalapp git nyan lol last-working-dir heroku)
+
+# autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
 unset config_files
+
+eval "$(direnv hook zsh)"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export DYLD_LIBRARY_PATH="usrl/local/lib:$DYLD_LIBRARY_PATH"
