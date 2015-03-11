@@ -135,10 +135,26 @@ install_dotfiles () {
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
+
+  link_file "$DOTFILES_ROOT/vim/profile" "$HOME/.vim"
+}
+
+install_vim_pathogen () {
+  info 'installing pathogen for vim'
+
+  if ! [ -f "$HOME/.vim/autoload/pathogen.vim" ]
+  then
+    mkdir -p ~/.vim/autoload
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    success 'vim-pathogen installed'
+  else
+    success 'Seems like pathogen is already installed. Happy viming!\n'
+  fi
 }
 
 setup_gitconfig
 install_dotfiles
+install_vim_pathogen
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
