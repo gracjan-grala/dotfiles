@@ -8,7 +8,7 @@ if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
 endif
 
-" ================ General Config ====================
+" ================ General Config ===================
 
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
@@ -100,7 +100,27 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" ================ Custom Settings ========================
+" ================ Status Line ======================
+
+set statusline=
+set statusline +=(%n)                   " buffer number
+set statusline +=\ %<%F                 " full path
+set statusline +=%r                     " readonly flag
+set statusline +=%m                     " modified flag
+set statusline +=\ %y                   " file type
+set statusline +=%{&ff}                 " file format
+set statusline +=%=                     " divider / right align what's under
+set statusline +=%4v,\                  " virtual column number
+set statusline +=%-l                    " current line
+set statusline +=/%L\                   " total lines
+
+hi User1 guifg=#eea040 guibg=#222222
+hi User2 guifg=#dd3333 guibg=#222222
+hi User3 guifg=#ff66ff guibg=#222222
+hi User4 guifg=#a0ee40 guibg=#222222
+hi User5 guifg=#eeee40 guibg=#222222
+
+" ================ Custom Settings ==================
 
 execute pathogen#infect()
 color jellybeans
