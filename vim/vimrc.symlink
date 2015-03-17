@@ -1,5 +1,5 @@
 " Use Vim settings, rather then Vi settings (much better!).
-" " This must be first, because it changes other options as a side effect.
+" This must be first, because it changes other options as a side effect.
 set nocompatible
 
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
@@ -76,18 +76,17 @@ set nofoldenable        "dont fold by default
 " ================ Completion =======================
 
 set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildmenu                " enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
 set wildignore+=vendor/rails/**
 set wildignore+=vendor/cache/**
 set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
+set wildignore+=*/log/**
+set wildignore+=*/tmp/**
 set wildignore+=*.png,*.jpg,*.gif
-
 
 " ================ Scrolling ========================
 
@@ -113,12 +112,6 @@ set statusline +=%=                     " divider / right align what's under
 set statusline +=%4v,\                  " virtual column number
 set statusline +=%-l                    " current line
 set statusline +=/%L\                   " total lines
-
-hi User1 guifg=#eea040 guibg=#222222
-hi User2 guifg=#dd3333 guibg=#222222
-hi User3 guifg=#ff66ff guibg=#222222
-hi User4 guifg=#a0ee40 guibg=#222222
-hi User5 guifg=#eeee40 guibg=#222222
 
 " ================ Custom Settings ==================
 
