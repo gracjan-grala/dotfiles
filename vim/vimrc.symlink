@@ -126,3 +126,5 @@ set title
 nnoremap <leader><leader> <c-^>
 
 map <C-n> :NERDTreeToggle<CR>
+let NERDSpaceDelims=1
+au BufRead,BufNewFile *.es6 setfiletype javascript
