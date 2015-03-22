@@ -3,6 +3,7 @@ export DOTFILES=$HOME/.dotfiles
 
 # set oh-my-zsh home dir and source the initializer
 export ZSH=$HOME/.oh-my-zsh
+plugins=(brew nyan heroku)
 source $ZSH/oh-my-zsh.sh
 
 # your project folder that we can `c [tab]` to
@@ -41,8 +42,6 @@ for file in ${(M)config_files:#*/completion.zsh}
 do
   source $file
 done
-
-plugins=(sublime sudo terminalapp git nyan lol last-working-dir heroku)
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
