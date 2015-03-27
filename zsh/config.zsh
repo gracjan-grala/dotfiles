@@ -7,6 +7,9 @@ fi
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 fpath=($DOTFILES/functions $fpath)
 
 autoload -U $DOTFILES/functions/*(:t)
