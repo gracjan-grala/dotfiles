@@ -125,6 +125,9 @@ set title
 
 nnoremap <leader><leader> <c-^>
 
+" Easy align interactive
+vnoremap <silent> <Enter> :EasyAlign<cr>
+
 map <C-n> :NERDTreeToggle<CR>
 let NERDSpaceDelims=1
 au BufRead,BufNewFile *.es6 setfiletype javascript
