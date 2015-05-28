@@ -112,6 +112,7 @@ set statusline +=%=                     " divider / right align what's under
 set statusline +=%4v,\                  " virtual column number
 set statusline +=%-l                    " current line
 set statusline +=/%L\                   " total lines
+set laststatus=2
 
 " ================ Custom Settings ==================
 
