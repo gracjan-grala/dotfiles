@@ -9,9 +9,10 @@ This is a fork of [holman's dotfiles](https://github.com/holman/dotfiles).
 Run this:
 
 ```sh
-git clone https://github.com/gracjan-grala/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/gracjan-grala/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
+
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
