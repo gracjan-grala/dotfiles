@@ -1,12 +1,9 @@
 [submodule "vim/profile/bundle/ag.vim"]
 	path = vim/profile/bundle/ag.vim
 	url = https://github.com/rking/ag.vim
-[submodule "vim/profile/bundle/--force"]
-	path = vim/profile/bundle/--force
-	url = git@github.com:kien/ctrlp.vim.git
 [submodule "vim/profile/bundle/ctrlp.vim"]
 	path = vim/profile/bundle/ctrlp.vim
-	url = git@github.com:kien/ctrlp.vim.git
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
 [submodule "vim/profile/bundle/jellybeans.vim"]
 	path = vim/profile/bundle/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim
