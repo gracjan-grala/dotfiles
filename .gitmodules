@@ -94,3 +94,6 @@
 [submodule "vim/profile/bundle/vim-surround"]
 	path = vim/profile/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/profile/bundle/vim-run-interactive"]
+	path = vim/profile/bundle/vim-run-interactive
+	url = git@github.com:christoomey/vim-run-interactive.git

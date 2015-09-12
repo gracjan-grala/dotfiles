@@ -118,6 +118,9 @@ set laststatus=2
 
 " ================ Custom Settings ==================
 
+" Run commands that require an interactive shell
+nnoremap <Leader>r :RunInInteractiveShell<space>
+
 execute pathogen#infect()
 color jellybeans
 set incsearch
