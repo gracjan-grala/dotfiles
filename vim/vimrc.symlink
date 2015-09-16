@@ -67,6 +67,8 @@ set list listchars=tab:\ \ ,trail:·,nbsp:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
+runtime macros/matchit.vim
+
 " ================ Folds ============================
 
 set foldmethod=indent   "fold based on indent
