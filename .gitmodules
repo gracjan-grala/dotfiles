@@ -97,3 +97,6 @@
 [submodule "vim/profile/bundle/vim-run-interactive"]
 	path = vim/profile/bundle/vim-run-interactive
 	url = git@github.com:christoomey/vim-run-interactive.git
+[submodule "vim/profile/bundle/emmet-vim"]
+	path = vim/profile/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
