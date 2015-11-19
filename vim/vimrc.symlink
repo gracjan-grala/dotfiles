@@ -118,6 +118,10 @@ set statusline +=%-l                    " current line
 set statusline +=/%L\                   " total lines
 set laststatus=2
 
+" Change statusline color when in Insert Mode
+au InsertEnter * hi StatusLine term=reverse ctermbg=229 gui=undercurl guisp=Yellow
+au InsertLeave * hi StatusLine term=reverse ctermbg=252 gui=bold,reverse
+
 " =============== The Silver Searcher ===============
 "
 if executable('ag')
