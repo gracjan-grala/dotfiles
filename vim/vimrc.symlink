@@ -2,7 +2,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
+" TODO: this may not be in the correct place. It is intended to allow overriding <leader>.
 " source ~/.vimrc.before if it exists.
 if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
@@ -98,11 +98,6 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " ================ Status Line ======================
 
 set statusline=
@@ -133,10 +128,12 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
-endif
 
-" bind K to grep word under cursor
-nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+  " bind K to grep word under cursor
+  nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+  map <leader>a :Ag<space>
+endif
 
 " ====================== Emmet ======================
 let g:user_emmet_install_global = 0
@@ -152,8 +149,12 @@ set timeoutlen=1000 ttimeoutlen=10
 set splitbelow
 set splitright
 
+map <leader>y "*y
+map <leader>co ggVG"*y
+map <leader>p :put +<enter>
+
 " Run commands that require an interactive shell
-nnoremap <Leader>r :RunInInteractiveShell<space>
+nnoremap <leader>r :RunInInteractiveShell<space>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
