@@ -149,9 +149,10 @@ set timeoutlen=1000 ttimeoutlen=10
 set splitbelow
 set splitright
 
-map <leader>y "*y
-map <leader>co ggVG"*y
-map <leader>p :put +<enter>
+map <leader>y "*y " yank to system clipboard
+map <leader>co ggVG"*y " copy whole file to system clipboard
+map <leader>p :put +<enter> " paste from system clipboard
+map <leader>f :let @*=expand("%")<CR> " copy relative filepath to system clipboard
 
 " Run commands that require an interactive shell
 nnoremap <leader>r :RunInInteractiveShell<space>
