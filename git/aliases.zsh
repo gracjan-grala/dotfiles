@@ -21,3 +21,4 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grh='git reset --hard'
 alias gsu='git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`'
+alias gac='git add -A && git commit -m'
