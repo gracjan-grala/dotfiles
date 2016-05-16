@@ -169,8 +169,41 @@ let g:syntastic_check_on_open=1
 " Always use vertical diffs
 set diffopt+=vertical
 
-execute pathogen#infect()
-color jellybeans
+call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'chrisbra/Replay'
+Plug 'christoomey/vim-run-interactive'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'digitaltoad/vim-jade'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elzr/vim-json'
+Plug 'mattn/emmet-vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'junegunn/vim-easy-align'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'kshenoy/vim-signature'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'othree/html5.vim'
+Plug 'rking/ag.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'slim-template/vim-slim'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'vim-ruby/vim-ruby'
+call plug#end()
+
+colorscheme jellybeans
 set incsearch
 set hlsearch
 set ignorecase

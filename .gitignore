@@ -1,4 +1,4 @@
 git/gitconfig.symlink
 
-vim/profile/autoload/pathogen.vim
 vim/profile/backups/
+vim/profile/plugged/
