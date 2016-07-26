@@ -10,14 +10,15 @@ endif
 
 " ================ General Config ===================
 
-set number                      "Line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set novisualbell                "Errors make sounds
-set autoread                    "Reload files changed outside vim
+set number                      " Line numbers are good
+set backspace=indent,eol,start  " Allow backspace in insert mode
+set history=1000                " Store lots of :cmdline history
+set showcmd                     " Show incomplete cmds down the bottom
+set showmode                    " Show current mode down the bottom
+set gcr=a:blinkon0              " Disable cursor blink
+set novisualbell                " Errors make sounds
+set autoread                    " Reload files changed outside vim
+set cursorline                  " Highlight the line the cursor is in
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -153,6 +154,8 @@ map <leader>y "*y " yank to system clipboard
 map <leader>co ggVG"*y " copy whole file to system clipboard
 map <leader>p :put +<enter> " paste from system clipboard
 map <leader>f :let @*=expand("%")<CR> " copy relative filepath to system clipboard
+map <leader>dt :%s/\s\+$<CR> " delete trailing whitespace in file
+map <leader>s :source $MYVIMRC<CR>
 
 " Run commands that require an interactive shell
 nnoremap <leader>r :RunInInteractiveShell<space>
