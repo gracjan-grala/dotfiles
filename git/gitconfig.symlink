@@ -21,6 +21,8 @@
         whitespace = nowarn
 [mergetool]
         keepBackup = false
+[diff]
+        compactionHeuristic = true
 [difftool]
         prompt = false
 [help]
