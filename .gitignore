@@ -1,4 +1,5 @@
 git/gitconfig.local.symlink
 
+vim/profile/.netrwhist
 vim/profile/backups/
 vim/profile/plugged/

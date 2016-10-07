@@ -180,26 +180,20 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'chrisbra/Replay'
 Plug 'christoomey/vim-run-interactive'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'digitaltoad/vim-jade'
-Plug 'elixir-lang/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
-Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'othree/html5.vim'
 Plug 'rking/ag.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'slim-template/vim-slim'
-Plug 'tomasr/molokai'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -223,3 +217,6 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 map <C-n> :NERDTreeToggle<CR>
 let NERDSpaceDelims=1
 au BufRead,BufNewFile *.es6 setfiletype javascript
+
+" vim-javascript
+let g:jsx_ext_required = 0
