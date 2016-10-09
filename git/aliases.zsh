@@ -11,9 +11,8 @@ alias gl='git pull --prune'
 alias glr='git pull --rebase --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gp='git push origin HEAD'
-# Remove `+` and `-` from start of diff lines; just rely upon color.
-alias gd='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
-alias gdc='git diff --cached --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gc='git commit'
 alias gco='git checkout'
 alias gcb='git copy-branch-name'
