@@ -55,6 +55,7 @@ brew 'unrar'
 brew 'vim'
 brew 'webkit2png'
 brew 'wget'
+brew 'yarn'
 brew 'youtube-dl'
 
 cask 'firefox'
