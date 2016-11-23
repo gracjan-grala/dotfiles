@@ -9,6 +9,9 @@ source $ZSH/oh-my-zsh.sh
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/workspace
 
+# https://github.com/benvan/sandboxd
+source $DOTFILES/sandbox/sandboxd
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -42,9 +45,6 @@ for file in ${(M)config_files:#*/completion.zsh}
 do
   source $file
 done
-
-# autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 unset config_files
 

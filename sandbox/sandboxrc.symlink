@@ -1,0 +1,22 @@
+sandbox_init_rvm(){
+  [[ -f "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+}
+
+sandbox_init_nvm(){
+  [[ -s `brew --prefix nvm`/nvm.sh ]] && . `brew --prefix nvm`/nvm.sh
+}
+
+sandbox_init_autojump(){
+  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+}
+
+sandbox_hook nvm node
+sandbox_hook nvm npm
+
+sandbox_hook rvm ruby
+sandbox_hook rvm pry
+
+sandbox_hook autojump j
+sandbox_hook autojump jc
+sandbox_hook autojump jo
+sandbox_hook autojump jco
