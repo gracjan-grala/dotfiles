@@ -17,6 +17,7 @@ sandbox_hook nvm yarn
 sandbox_hook rvm ruby
 sandbox_hook rvm gem
 sandbox_hook rvm pry
+sandbox_hook rvm bundle
 
 sandbox_hook autojump j
 sandbox_hook autojump jc
