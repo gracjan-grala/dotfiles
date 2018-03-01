@@ -40,7 +40,7 @@ There's a few special files in the hierarchy.
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
-- **Brewfile**: This is a list of applications for [Homebrew Cask](http://caskroom.io)
+- **Brewfile**: This is a list of applications for [Homebrew Cask](https://caskroom.github.io)
   to install: things like Chrome and 1Password and Adium and stuff. Might want to edit
   this file before running any initial setup.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
