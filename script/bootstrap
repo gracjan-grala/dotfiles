@@ -137,6 +137,7 @@ install_dotfiles () {
   done
 
   link_file "$DOTFILES_ROOT/vim/profile" "$HOME/.vim"
+  link_file "$DOTFILES_ROOT/vim/vimrc.symlink" "$HOME/.config/nvim/init.vim"
 }
 
 setup_gitconfig

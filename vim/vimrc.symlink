@@ -128,7 +128,6 @@ au InsertEnter * hi StatusLine term=reverse ctermbg=229 gui=undercurl guisp=Yell
 au InsertLeave * hi StatusLine term=reverse ctermbg=252 gui=bold,reverse
 
 " =============== The Silver Searcher ===============
-"
 
 map <leader>a :Ack!<space>
 set shellpipe=> " a temporary workaround
@@ -157,6 +156,8 @@ endif
 " ================ Custom Settings ==================
 
 set timeoutlen=1000 ttimeoutlen=10 " Eliminate annoying escape sequence delays
+set lazyredraw                     " Redraw only when we need to
+set shell=/bin/zsh
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -171,32 +172,57 @@ map <leader>f :let @*=expand("%")<CR>  " Copy relative filepath to system clipbo
 map <leader>dt :%s/\s\+$<CR>           " Delete trailing whitespace in file
 map <leader>s :source $MYVIMRC<CR>     " Source .vimrc
 nnoremap <leader><leader> <c-^>        " Make ,, switch to previously used buffer
+nnoremap gV `[v`]                      " Highlight last inserted text
+nnoremap gh :bp<CR>                    " Go to previous buffer
+nnoremap gl :bn<CR>                    " Go to next buffer
+nnoremap <leader>w :w<CR>              " Quicker file save
+" Make ; act as : in normal mode:
+nnoremap ; :
+" Global clipboard operations with ,x:
+noremap <leader>x "+
+xnoremap . :norm.<CR>                  " Make . work with visual selections
+xnoremap Q :'<,'>:normal @             " Execute a macro over visually selected lines
+
+" URL encode/decode selection
+vnoremap <leader>en :!python -c 'import sys,urllib;print urllib.quote(sys.stdin.read().strip())'<cr>
+vnoremap <leader>de :!python -c 'import sys,urllib;print urllib.unquote(sys.stdin.read().strip())'<cr>
+
+" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 " Easy align interactive
 vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
-let NERDSpaceDelims=1
+
+" Use rainbow parentheses
+let g:rainbow_active = 1
 
 " Always use vertical diffs
 set diffopt+=vertical
 
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 Plug 'nanotech/jellybeans.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'kshenoy/vim-signature'
+Plug 'haya14busa/incsearch.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'tommcdo/vim-exchange'
 Plug 'junegunn/vim-easy-align'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'rhysd/committia.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'pangloss/vim-javascript'
@@ -205,11 +231,15 @@ Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-endwise'
+Plug 'w0rp/ale'
+Plug 'AndrewRadev/splitjoin.vim'
 call plug#end()
 
 colorscheme jellybeans
 
 au BufRead,BufNewFile *.es6 setfiletype javascript
-
 let g:jsx_ext_required = 0 " [vim-javascript] handle jsx syntax in .js files:
-let g:rainbow_active = 1
+
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+\}

@@ -11,7 +11,7 @@ alias tab-grey="tab-color bcbcbc"
 
 set_tab_color() {
   case "$1" in
-    vi* ) tab-green ;;
+    (vi|vim|nvim) ) tab-green ;;
     (pry|irb|ruby|bundle|rake|rails|guard|rspec|m\ )* ) tab-red ;;
     (node|npm|nvm)* ) tab-yellow ;;
     vagrant* ) tab-purple ;;
