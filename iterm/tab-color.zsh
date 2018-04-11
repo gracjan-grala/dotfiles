@@ -13,7 +13,7 @@ set_tab_color() {
   case "$1" in
     (vi|vim|nvim) ) tab-green ;;
     (pry|irb|ruby|bundle|rake|rails|guard|rspec|m\ )* ) tab-red ;;
-    (node|npm|nvm)* ) tab-yellow ;;
+    (node|npm|nvm|yarn)* ) tab-yellow ;;
     vagrant* ) tab-purple ;;
     ssh* ) tab-orange ;;
     vpn ) tab-white ;;
