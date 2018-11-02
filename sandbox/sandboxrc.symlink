@@ -10,6 +10,10 @@ sandbox_init_autojump(){
   [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 }
 
+sandbox_init_virtualenv(){
+  [[ -s `brew --prefix`/bin/virtualenvwrapper.sh ]] && . `brew --prefix`/bin/virtualenvwrapper.sh
+}
+
 sandbox_hook autojump j
 sandbox_hook autojump jc
 sandbox_hook autojump jco
@@ -25,3 +29,5 @@ sandbox_hook rvm pry
 sandbox_hook rvm rails
 sandbox_hook rvm rake
 sandbox_hook rvm ruby
+
+sandbox_hook virtualenv workon
