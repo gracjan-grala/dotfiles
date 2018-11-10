@@ -64,5 +64,4 @@ fi
 
 eval "$(direnv hook zsh)"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export DYLD_LIBRARY_PATH="usrl/local/lib:$DYLD_LIBRARY_PATH"
