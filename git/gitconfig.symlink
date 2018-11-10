@@ -27,6 +27,9 @@
         prompt = false
 [help]
         autocorrect = 1
+[pager]
+        diff = diff-so-fancy | less --tabs=1,5 -RFX
+        show = diff-so-fancy | less --tabs=1,5 -RFX
 [push]
         # See `git help config` (search for push.default)
         # for more information on different options of the below setting.
