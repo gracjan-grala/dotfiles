@@ -21,6 +21,7 @@ brew 'ffmpeg'
 brew 'findutils'
 brew 'fpp'
 brew 'gdb'
+brew 'gifsicle'
 brew 'gist'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
