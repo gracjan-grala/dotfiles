@@ -13,6 +13,12 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Use AirDrop over every interface. srsly this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
+# Don't report crashes to Apple
+sudo defaults write com.apple.CrashReporter DialogType none
+
+# Disable Apple Captive Portal
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -boolean false
+
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
