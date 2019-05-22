@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Delete local branches that are not present on the remote.
+# Shows an editable list before deleting.
+
+tmp_file=/tmp/branches-to-delete
+local_branches=$(git branch | sed -E "s/^\*?\s*//g" | sort)
+remote_branches=$(git branch -r | sed -E "s/^\s*origin\///g" | grep -v HEAD | sort)
+
+diff --new-line-format="" --unchanged-line-format="" <(echo "$local_branches") <(echo "$remote_branches") >$tmp_file || vim $tmp_file && xargs git branch -D <$tmp_file
