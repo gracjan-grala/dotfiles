@@ -12,7 +12,6 @@ Run this:
 git clone https://github.com/gracjan-grala/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
-
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
