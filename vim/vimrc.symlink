@@ -142,7 +142,7 @@ cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
 if executable('ag')
-  " Use Ag over Grep
+  " Use ag over grep
   let g:ackprg = 'ag --vimgrep --smart-case'
   set grepprg=ag\ --nogroup\ --nocolor
 
@@ -248,3 +248,7 @@ let g:jsx_ext_required = 0 " [vim-javascript] handle jsx syntax in .js files:
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
 \}
+
+map ]l <Plug>(ale_next_wrap)
+nmap <silent> <C-m> <Plug>(ale_next_wrap)
+map [l <Plug>(ale_previous_wrap)

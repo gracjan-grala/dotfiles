@@ -14,8 +14,8 @@ set_tab_color() {
     (vi|vim|nvim) ) tab-green ;;
     (pry|irb|ruby|bundle|rake|rails|guard|rspec|m\ )* ) tab-red ;;
     (node|npm|nvm|yarn)* ) tab-yellow ;;
+    (ssh|kubectl|kex)* ) tab-orange ;;
     vagrant* ) tab-purple ;;
-    ssh* ) tab-orange ;;
     vpn ) tab-white ;;
     *   ) tab-grey ;;
   esac

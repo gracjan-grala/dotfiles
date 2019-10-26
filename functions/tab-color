@@ -28,3 +28,7 @@ tab-color() {
     echo -ne "\033]6;1;bg;green;brightness;$g\a"
     echo -ne "\033]6;1;bg;blue;brightness;$b\a"
 }
+
+reset-tab-color() {
+  echo -ne "\033]6;1;bg;*;default\a"
+}

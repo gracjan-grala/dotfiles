@@ -4,11 +4,11 @@
 [hub]
         protocol = https
 [alias]
-        co = checkout
-        promote = !$DOFILES/bin/git-promote
-        wtf     = !$DOFILES/bin/git-wtf
+        co                = checkout
+        promote           = !$DOFILES/bin/git-promote
+        wtf               = !$DOFILES/bin/git-wtf
         rank-contributors = !$DOFILES/bin/git-rank-contributors
-        count   = !git shortlog -sn
+        count             = !git shortlog -sn
 [color]
         diff = auto
         status = auto
