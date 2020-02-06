@@ -65,3 +65,4 @@ fi
 eval "$(direnv hook zsh)"
 
 export DYLD_LIBRARY_PATH="usrl/local/lib:$DYLD_LIBRARY_PATH"
+export HOMEBREW_NO_ANALYTICS=1
